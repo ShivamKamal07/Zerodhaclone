@@ -19,10 +19,10 @@ function Stats() {
 
                 </div>
                 <div className='col-6 p-5'>
-                    <img src='media/images/ecosystem.png' style={{width:"100%"}}/>
+                    <img src='media/images/ecosystem.png' style={{width:"100%"}} alt=''/>
                     <div className='text-center'>
-                        <a href='/#'className='mx-5'style={{textDecoration:"none"}}>Explore our products <i class="fa fa-long-arrow-right" aria-hidden="ture"></i></a>
-                        <a href='/#' className='mr-5'style={{textDecoration:"none"}}>Try kite demo <i class="fa fa-long-arrow-right" aria-hidden="ture"></i></a>
+                        <a href='/#'className='mx-5'style={{textDecoration:"none"}}>Explore our products <i class="fa fa-long-arrow-right" aria-hidden={true}></i></a>
+                        <a href='/#' className='mr-5'style={{textDecoration:"none"}}>Try kite demo <i class="fa fa-long-arrow-right" aria-hidden={true}></i></a>
                     </div>
                 </div>
 
