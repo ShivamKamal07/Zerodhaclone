@@ -14,73 +14,73 @@ function Footer() {
           </div>
           <div className="col ">
             <p>Company</p>
-            <a href="" style={{ textDecoration: "none", }}>
+            <a href="/#" style={{ textDecoration: "none", }}>
               About
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none", marginTop: "12px",display: "inline-block" }}>
+            <a href="/#" style={{ textDecoration: "none", marginTop: "12px",display: "inline-block" }}>
               Products
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Pricing
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Referral programme
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none", marginTop: "12px",display: "inline-block" }}>
+            <a href="/#" style={{ textDecoration: "none", marginTop: "12px",display: "inline-block" }}>
               Careers
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Zerodha.tech
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Press & media
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Zerodha cares (CSR)
             </a>
             <br />
           </div>
           <div className="col">
             <p>Support</p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href="/#" style={{ textDecoration: "none" }}>
               Contact
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Support portal
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Z-Connect blog
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               List of charges
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Downloads & resources
             </a>
             <br />
           </div>
           <div className="col">
             <p>Account</p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href="/#" style={{ textDecoration: "none" }}>
               Open an account
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               Fund transfer
             </a>
             <br />
-            <a href="" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
+            <a href="/#" style={{ textDecoration: "none",marginTop: "12px",display: "inline-block"  }}>
               60 day challenge
             </a>
             <br />
@@ -133,25 +133,25 @@ function Footer() {
           </p>
         </div>
         <div className="container" style={{  display: "flex", justifyContent: "center"}}>
-          <a href="" style={{ textDecoration: "none", marginRight: "32px",  }}>
+          <a href="/#" style={{ textDecoration: "none", marginRight: "32px",  }}>
             NSE
           </a>
-          <a href="" style={{ textDecoration: "none",marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none",marginRight: "32px" }}>
             BSE
           </a>
-          <a href="" style={{ textDecoration: "none",marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none",marginRight: "32px" }}>
             MCX
           </a>
-          <a href="" style={{ textDecoration: "none", marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none", marginRight: "32px" }}>
             Terms&Conditions
           </a>
-          <a href="" style={{ textDecoration: "none", marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none", marginRight: "32px" }}>
             Policies&Procedure
           </a>
-          <a href="" style={{ textDecoration: "none", marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none", marginRight: "32px" }}>
             Privacy&Policy
           </a>
-          <a href="" style={{ textDecoration: "none", marginRight: "32px" }}>
+          <a href="/#" style={{ textDecoration: "none", marginRight: "32px" }}>
             Disclosure
           </a>
         </div>
