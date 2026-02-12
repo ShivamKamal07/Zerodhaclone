@@ -4,17 +4,23 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
-const {OrdersModel} = require("./model/OrdersModel");
+const { OrdersModel } = require("./model/OrdersModel");
+
+const authRoute = require("./Routes/AuthRoute");
 
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGODB_URL;
 
 const app = express();
-app.use(express.json());
+app.use(cookieParser());
 
+app.use(express.json());
+app.use("/", authRoute);
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -186,36 +192,45 @@ app.use(bodyParser.json());
 
 // });
 
-
-
 // api endpoint for allHoldings
 
-app.get("/allHoldings", async(req,res)=>{
-    let allHoldings = await HoldingsModel.find({});
-    res.json(allHoldings);
+mongoose
+  .connect(url)
+  .then(() => console.log("MongoDB is  connected successfully"))
+  .catch((err) => console.error(err));
+
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://zerodha-al48.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
+
+app.get("/allHoldings", async (req, res) => {
+  let allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
 });
 
 // api endpoint for allpositions
 
-app.get("/allPositions", async(req,res)=>{
-    let allPositions = await PositionsModel.find({});
-    res.json(allPositions);
+app.get("/allPositions", async (req, res) => {
+  let allPositions = await PositionsModel.find({});
+  res.json(allPositions);
 });
 
 //api endpoint for newOrders
 
-app.post("/newOrder", async(req,res)=>{
-    let newOrder = new OrdersModel({
-        name:req.body.name,
-        gty:req.body.gty,
-        price: req.body.price,
-        mode: req.body.mode,
-
-    });
-    newOrder.save();
-    res.send("order saved!");
+app.post("/newOrder", async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    gty: req.body.gty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+  newOrder.save();
+  res.send("order saved!");
 });
-
 
 app.listen(PORT, () => {
   console.log("App started!");
