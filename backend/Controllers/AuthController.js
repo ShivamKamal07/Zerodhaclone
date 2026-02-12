@@ -1,6 +1,7 @@
 const User = require("../Models/UserModel");
 const { createSecretToken } = require("../util/SecretToken");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 
 //for signup
@@ -55,3 +56,28 @@ module.exports.Login = async (req, res, next) => {
     console.error(error);
   }
 }
+
+
+//for Handle the HOME Route
+
+module.exports.userVerification = async (req, res) => {
+  try {
+    const token = req.cookies.token;
+
+    if (!token) {
+      return res.json({ status: false, message: "No token found" });
+    }
+
+    jwt.verify(token, process.env.JWT_SECRET, (err, data) => {
+      if (err) {
+        return res.json({ status: false, message: "Invalid token" });
+      } else {
+        return res.json({ status: true, user: data });
+      }
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ status: false, message: "Server error" });
+  }
+};
