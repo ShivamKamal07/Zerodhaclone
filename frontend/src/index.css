@@ -1,33 +1,112 @@
-body{
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Fira Sans', 'Droid Sans';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing:grayscale;
-
-}
-code{
-    font-family: source-code-pro, Menlo, Monaco, Consolas,'courier New',monospace;
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', 'Fira Sans', 'Droid Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.nav-link{
-    margin-left: 2.5rem;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
 }
-#supportHero{
-    background-color: rgb(56, 126, 209);
-    color: white;
+
+/* Navbar */
+.nav-link {
+  margin-left: 2.5rem;
 }
-#supportHero a{
-    color: white;
+
+/* Hero Section */
+#supportHero {
+  background-color: rgb(56, 126, 209);
+  color: white;
+  padding: 60px 20px;
 }
-#supportWrapper{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 150px;
+
+#supportHero a {
+  color: white;
+  text-decoration: none;
 }
-#supportHero input{
-    padding: 20px 50px;
-    width: 100%;
-    font-size: 20px;
-    border-radius: 10px;
-    border: none;
+
+#supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 150px;
+  gap: 40px;
+}
+
+#supportHero input {
+  padding: 20px 50px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+
+/* ===== Responsive CSS ==== */
+
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  #supportWrapper {
+    margin: 0 80px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  #supportWrapper {
+    margin: 0 40px;
+    gap: 20px;
+  }
+
+  #supportHero input {
+    font-size: 18px;
+    padding: 15px 30px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 1rem;
+  }
+
+  #supportWrapper {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  #supportHero {
+    padding: 40px 15px;
+  }
+
+  #supportHero input {
+    font-size: 16px;
+    padding: 12px 20px;
+    max-width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  #supportHero {
+    padding: 30px 10px;
+  }
+
+  #supportHero input {
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 6px;
+  }
+
+  .nav-link {
+    margin-left: 0.5rem;
+  }
 }

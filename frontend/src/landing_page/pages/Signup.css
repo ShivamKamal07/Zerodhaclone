@@ -1,0 +1,104 @@
+/* Reset only for signup page */
+.signup_page * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.signup_page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form_container {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form_container h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  color: rgba(0, 212, 255, 1);
+  text-align: center;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form_container label {
+  font-size: 1.1rem;
+  color: #656262;
+}
+
+.form_container input {
+  border: none;
+  padding: 0.6rem;
+  border-bottom: 1px solid gray;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form_container input:focus {
+  border-bottom: 2px solid rgba(0, 212, 255, 1);
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.form_container button {
+  background-color: rgba(0, 212, 255, 1);
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: 0.3s ease;
+}
+
+.form_container button:hover {
+  background-color: rgb(0, 180, 216);
+}
+
+.form_container span {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form_container span a {
+  text-decoration: none;
+  color: rgba(0, 212, 255, 1);
+  font-weight: bold;
+}
+
+.form_container span a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media only screen and (max-width: 500px) {
+  .form_container {
+    padding: 1.5rem;
+  }
+}
