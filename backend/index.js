@@ -201,7 +201,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://zerodha-al48.vercel.app/"],
+    origin: ["https://zerodha-al48.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
