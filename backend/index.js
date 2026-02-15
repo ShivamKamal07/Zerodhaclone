@@ -13,14 +13,13 @@ const { OrdersModel } = require("./model/OrdersModel");
 
 const authRoute = require("./Routes/AuthRoute");
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3000;
 const url = process.env.MONGODB_URL;
 
 const app = express();
-app.use(cookieParser());
 
 app.use(express.json());
-app.use("/", authRoute);
+app.use(cookieParser());
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -201,12 +200,13 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://zerodha-al48.vercel.app/","https://zerodha-alpha-two.vercel.app/"],
+    origin: ["https://zerodha-al48.vercel.app","https://zerodha-alpha-two.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
-app.use(cookieParser());
+
+app.use("/", authRoute);
 
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
@@ -233,8 +233,12 @@ app.post("/newOrder", async (req, res) => {
   res.send("order saved!");
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+
 app.listen(PORT, () => {
   console.log("App started!");
-  mongoose.connect(url);
   console.log("MongoDB connected!");
 });
