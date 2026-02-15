@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports.Signup = async (req, res, next) => {
   try {
+    console.log("Signup hit on Render");
     const { email, password, username, createdAt } = req.body;
     if(!email || !password || !username){
       return res.json({message: "All field are required"});
@@ -85,3 +86,6 @@ module.exports.userVerification = async (req, res) => {
     res.status(500).json({ status: false, message: "Server error" });
   }
 };
+
+
+

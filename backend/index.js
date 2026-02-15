@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 const url = process.env.MONGODB_URL;
 
 const app = express();
-app.use(cors());
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -198,20 +198,20 @@ mongoose
   .then(() => console.log("MongoDB is  connected successfully"))
   .catch((err) => console.error(err));
 
-// app.use(
-//   cors({
-//     origin: ["https://zerodha-al48.vercel.app","https://zerodha-alpha-two.vercel.app"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   }),
-// );
-
 app.use(
   cors({
-    origin: true,
+    origin: ["https://zerodha-al48.vercel.app","https://zerodha-alpha-two.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-  })
+  }),
 );
+
+// app.use(
+//   cors({
+//     origin: true,
+//     credentials: true,
+//   })
+// );
 
 
 app.use("/", authRoute);
