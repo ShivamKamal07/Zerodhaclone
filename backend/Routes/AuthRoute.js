@@ -4,7 +4,7 @@ const { userVerification } = require("../Controllers/AuthController");
 const router = require('express').Router();
 
 router.post("/signup", Signup);
-router.post('/login', Login);
+router.get('/login', Login);
 router.post('/',userVerification);
 
 module.exports = router;
